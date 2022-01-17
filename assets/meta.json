@@ -1,0 +1,16 @@
+{
+    "name": "就不装云管家",
+    "namespace": "MotooriKashin",
+    "version": "0.0.1",
+    "description": "网页端百度云直接下载文件，就是不装百度云管家，哼！",
+    "author": "MotooriKashin",
+    "homepage": "https://github.com/MotooriKashin/BaiduYun-Escape",
+    "supportURL": "https://github.com/MotooriKashin/BaiduYun-Escape/issues",
+    "icon": "https://pan.baidu.com/ppres/static/images/favicon.ico",
+    "match": [
+        "*://pan.baidu.com/disk/home*",
+        "*://pan.baidu.com/disk/main*"
+    ],
+    "grant": "none",
+    "license": "MIT"
+}

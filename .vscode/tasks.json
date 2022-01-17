@@ -1,0 +1,47 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "typescript",
+			"tsconfig": "src/tsconfig.json",
+			"problemMatcher": [
+				"$tsc"
+			],
+			"group": "build",
+			"label": "tsc",
+			"detail": "编译TypeScript源码"
+		},
+		{
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"${workspaceFolder}\\build.js",
+				"${workspaceFolder}"
+			],
+			"dependsOn": [
+				"tsc"
+			],
+			"label": "build",
+			"detail": "编译最终的用户脚本本体",
+			"problemMatcher": []
+		},
+		{
+			"type": "shell",
+			"command": "Remove-Item",
+			"args": [
+				"${workspaceFolder}\\dist\\*",
+				"-recurse"
+			],
+			"dependsOn": [
+				"build"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "清理生成目录",
+			"label": "clear",
+			"problemMatcher": []
+		}
+	]
+}

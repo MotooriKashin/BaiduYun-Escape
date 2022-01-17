@@ -1,0 +1,14 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitUseStrict": true,
+    "outDir": "../dist/"
+  },
+  "include": [
+    "**/*"
+  ]
+}
